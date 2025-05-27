@@ -1,0 +1,279 @@
+/* Importação de fontes pixeladas do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+    /* Cores primárias vibrantes */
+    --primary-red: #FF0000;    /* Vermelho */
+    --primary-blue: #0000FF;   /* Azul */
+    --primary-yellow: #FFFF00;  /* Amarelo */
+    --neutral-dark: #222222;   /* Quase preto para textos */
+    --neutral-light: #FFFFFF;  /* Branco puro para fundo */
+    --accent-green: #00FF00;   /* Verde para detalhes */
+}
+
+body {
+    font-family: 'VT323', monospace; /* Fonte principal com estilo pixelado */
+    background-color: var(--neutral-dark);
+    color: var(--neutral-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita rolagem horizontal */
+}
+
+header {
+    background-color: var(--primary-red);
+    color: var(--neutral-light);
+    text-align: center;
+    padding: 2.5em 0;
+    border-bottom: 5px solid var(--primary-yellow); /* Detalhe pixelado */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive; /* Fonte mais impactante para o título */
+    font-size: 3em;
+    margin-bottom: 0.2em;
+    text-shadow: 4px 4px 0px var(--primary-blue); /* Efeito de sombra pixelado */
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+nav {
+    background-color: var(--primary-blue);
+    padding: 1em 0;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-yellow);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.5em; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    color: var(--neutral-light);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: 'Press Start 2P', cursive;
+    padding: 0.5em 1em;
+    border: 3px solid transparent; /* Borda inicial invisível */
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 0px var(--neutral-dark);
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--primary-yellow);
+    color: var(--neutral-dark);
+    border-color: var(--primary-red); /* Borda ao passar o mouse */
+    transform: scale(1.05); /* Pequeno zoom no hover */
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 2em auto;
+    background-color: var(--neutral-dark); /* Fundo da seção */
+    border: 5px solid var(--primary-red);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.pixel-section {
+    margin-bottom: 4em;
+    padding: 2em;
+    background-color: var(--neutral-dark);
+    border: 3px dashed var(--primary-yellow); /* Borda tracejada pixelada */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pixel-section h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.2em;
+    color: var(--primary-yellow);
+    text-align: center;
+    margin-bottom: 1em;
+    text-shadow: 3px 3px 0px var(--primary-blue);
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid var(--accent-green);
+}
+
+.pixel-section p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.game-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5em;
+    margin-top: 2em;
+}
+
+.game-card {
+    background-color: var(--neutral-dark);
+    border: 4px solid var(--primary-blue);
+    padding: 1.5em;
+    text-align: center;
+    box-shadow: 8px 8px 0px var(--accent-green), 16px 16px 0px var(--primary-red); /* Efeito 3D pixelado */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.game-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 8px 8px 0px var(--primary-red), 16px 16px 0px var(--primary-blue); /* Inverte as sombras */
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em;
+    border: 2px solid var(--primary-yellow);
+    image-rendering: pixelated; /* Garante que a imagem se mantenha pixelada */
+    max-width: 200px;
+}
+
+.game-card h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--primary-yellow);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 0px var(--neutral-dark);
+}
+
+.game-card p {
+    font-size: 1em;
+    color: var(--neutral-light);
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 600px;
+    margin: 2em auto;
+    background-color: var(--neutral-dark);
+    padding: 2.5em;
+    border: 3px solid var(--primary-blue);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    color: var(--primary-yellow);
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 0px var(--neutral-dark);
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    background-color: var(--neutral-dark);
+    color: var(--accent-green);
+    border: 2px solid var(--primary-yellow);
+    padding: 1em;
+    font-family: 'VT323', monospace;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    image-rendering: pixelated; /* Para garantir consistência */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 10px var(--accent-green);
+}
+
+form button {
+    background-color: var(--primary-red);
+    color: var(--neutral-light);
+    border: 3px solid var(--primary-yellow);
+    padding: 1em 2em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    text-shadow: 2px 2px 0px var(--neutral-dark);
+    box-shadow: 4px 4px 0px var(--primary-blue);
+}
+
+form button:hover {
+    background-color: var(--accent-green);
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0px var(--primary-red);
+}
+
+footer {
+    background-color: var(--primary-blue);
+    color: var(--neutral-light);
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 4em;
+    border-top: 5px solid var(--primary-yellow);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+    font-family: 'VT323', monospace;
+    font-size: 1.1em;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    nav ul li a {
+        font-size: 1.1em;
+    }
+
+    .pixel-section h2 {
+        font-size: 1.8em;
+    }
+
+    .game-gallery {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .game-card {
+        box-shadow: 5px 5px 0px var(--accent-green), 10px 10px 0px var(--primary-red);
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .pixel-section h2 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 1em;
+        margin: 1em auto;
+    }
+
+    form {
+        padding: 1.5em;
+    }
+}
